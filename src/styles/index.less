@@ -1,0 +1,84 @@
+// @import 'reset.less';
+@import 'core.less';
+@import 'uikit/index.less';
+
+// 重定义iview模块样式
+.preview .ivu-modal-body{
+    padding: 0;
+}
+
+// 求Body的上下边框
+.betaview .ivu-modal-body{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ivu-modal{
+    margin-bottom: 40px;
+}
+.ivu-modal-header,.ivu-modal-footer{
+    border-top: none;
+    border-bottom: none;
+}
+
+// flex盒子
+.flex-box{
+    .mix-flex-box();
+}
+.flex{
+    .mix-flex();
+}
+
+// 间隙
+.space{
+    margin-top: 20px;
+}
+.space-min{
+    margin-top: 10px;
+}
+
+// 浮动
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.clearfix:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+// 小图片
+.mini-pic{
+    width: 50px;
+    padding: 5px 0;
+    border-radius: 50px;
+    img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+}
+
+// 内容分割
+.tags-title{
+    font-size: 14px;
+    color: #80848f;
+    margin-bottom: 5px;
+}
+
+// a 超链文字属性
+.hyper-text{
+    color: #495060;
+    a{
+        color: #495060;
+    }
+}
+
+// 居中
+.align-center{
+    text-align: center;
+}
