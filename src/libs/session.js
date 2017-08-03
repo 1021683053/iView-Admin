@@ -13,6 +13,12 @@ export const DO_LOGOUT = ()=>{
     return Cookie.remove(SESSION.NAME);
 };
 
+// 设置登陆信息
+export const DO_LOGIN = (token)=>{
+    console.log(SESSION, token);
+    return Cookie.set(SESSION.NAME, token, { expires: SESSION.TIMEOUT-0} );
+}
+
 // 默认暴露信息
 export default{
     IS_LOGIN,

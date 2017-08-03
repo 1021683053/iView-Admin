@@ -12,7 +12,7 @@ export default {
     // Cookie session ID;
     SESSION: {
         'NAME': 'SESSION_ID',
-        'TIMEOUT': '1'
+        'TIMEOUT': 1
     }
 
 }

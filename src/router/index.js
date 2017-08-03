@@ -3,15 +3,15 @@ import Router from 'vue-router';
 import Routers from './routers';
 import Util from '../libs/util';
 import iView from 'iview';
-import session from '@/libs/session';
+import { IS_LOGIN } from '@/libs/session';
 
 Vue.use(Router)
 
 let RouterConfig = {
     routes: Routers
-}
+};
 
-RouterConfig.mode = 'history'
+RouterConfig.mode = 'history';
 
 let router = new Router(RouterConfig);
 
@@ -20,8 +20,7 @@ router.beforeEach((to ,from, next)=>{
     Util.title( to.meta.title );
 
     // 未登录
-    let SSO = session.getSSO();
-    if( to.meta.token && !SSO ){
+    if( to.meta.token && !IS_LOGIN() ){
         let callback = to.fullPath;
         Util.login(router, callback);
     }

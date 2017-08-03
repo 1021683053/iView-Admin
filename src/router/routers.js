@@ -11,7 +11,7 @@ const routers = [
         meta: {
             title: 'ERR',
         },
-        component: (resolve) => require(['../views/error.vue'], resolve)
+        component: (resolve) => require(['@/views/error.vue'], resolve)
     },
     {
         path: '/',
@@ -32,7 +32,7 @@ const routers = [
                     title: '控制面板',
                     token: true
                 },
-                component: (resolve) => require(['../views/home/index.vue'], resolve)
+                component: (resolve) => require(['@/views/home/index.vue'], resolve)
             },
             {
                 path: 'error',
@@ -40,7 +40,7 @@ const routers = [
                     title: 'ERROR',
                     token: true
                 },
-                component: (resolve) => require(['../views/error.vue'], resolve)
+                component: (resolve) => require(['@/views/error.vue'], resolve)
             },
             {
                 path: '*',

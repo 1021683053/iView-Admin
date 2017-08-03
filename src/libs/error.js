@@ -1,3 +1,7 @@
+/**
+ * 统一错误处理，弹出错误根据在 Promise throw 出error 即可到达此处
+ */
+
 import Util from '../libs/util';
 
 export default function(err){

@@ -53,6 +53,8 @@
 <script>
 import ParticleConfig from '@/config/particles';
 require('particles.js');
+import { GET_LOGIN } from '@/service/gateway';
+
 export default{
     data(){
         return {
@@ -91,12 +93,13 @@ export default{
             })
         },
         async login(){
-            // let response = await GET_LOGIN(this.datas);
-            // let callback = this.$route.query.callback || '/';
-            // if( !response ){ return; }
-            // if( response.success == true ){
-            //     this.$router.push({path: callback});
-            // }
+            let response = await GET_LOGIN(this.datas);
+            console.log(response);
+            let callback = this.$route.query.callback || '/';
+            if( !response ){ return; }
+            if( response.success == true ){
+                this.$router.push({path: callback});
+            }
         }
     }
 }
