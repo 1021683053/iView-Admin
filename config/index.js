@@ -28,11 +28,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/cdn':{
+        '/cnode':{
             changeOrigin: true,
-            target: 'http://10.0.0.221:7001',
+            target: 'https://cnodejs.org/api/v1',
             pathRewrite: {
-                '^/cdn': '/'
+                '^/cnode/api/v1': '/'
             }
         }
     },

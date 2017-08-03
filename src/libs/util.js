@@ -41,7 +41,7 @@ util.getStyle = function (element, styleName) {
 util.removeNull = (o)=>{
     let ret = {};
     Object.keys(o).forEach(k=>{
-        if( o[k] && o[k] !='' ){
+        if( o[k] !='' || o[k] === undefined ){
             ret[k] = o[k];
         }
     });

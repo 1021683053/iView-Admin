@@ -53,6 +53,8 @@
 <script>
 import ParticleConfig from '@/config/particles';
 require('particles.js');
+
+// 当前页面所需请求
 import { GET_LOGIN } from '@/service/gateway';
 
 export default{

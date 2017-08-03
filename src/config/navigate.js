@@ -9,10 +9,10 @@ let menus =[
     },
     {
         type: 'menu',
-        name: 'users',
+        name: 'article',
         icon: 'person-stalker',
-        text: '用户',
-        path: '/users/users',
+        text: '文章列表',
+        path: '/article',
         ison: ['/users/user', '/users/modify']
     },
     {

@@ -1,7 +1,15 @@
 export default{
-    /*
-     * 格式化如期函数
-     * date 时间戳
+
+    cutstring: (str, number)=>{
+        if( str.length<=number ){
+            return str;
+        }
+        return str.substring(0, number)+'...';
+    },
+
+    /* 
+     * 格式化时间
+     * data 时间戳
      * format 需要输出的时间格式 eg: 'yyyy年 MM月 dd日 hh:mm:ss'
      */
     dateFormat:(date, format)=>{

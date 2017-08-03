@@ -32,7 +32,15 @@ const routers = [
                     title: '控制面板',
                     token: true
                 },
-                component: (resolve) => require(['@/views/home/index.vue'], resolve)
+                component: (resolve) => require(['@/views/home'], resolve)
+            },
+            {
+                path: '/article',
+                meta: {
+                    title: '文章列表',
+                    token: true
+                },
+                component: (resolve) => require(['@/views/article'], resolve)
             },
             {
                 path: 'error',
